@@ -1,24 +1,33 @@
-<div class="container-fluid text-center bg-success p-4" style="--bs-bg-opacity: .5;">
-  <h1>QouteApp</h1><hr/>
-  <p class="mx-auto">{{topQoute.description}}</p>
+<div class=" text-center fs-3">
+  <h1><strong>QouteApp</strong></h1><hr class="py-3">
+  <div class="container-sm">
+      <p class="mx-auto" style="width: 800px;">
+        {{topQoute.description}} <br>
+       <i> Written by: {{topQoute.author}}</i>
+      
+      </p>
+  </div>
 </div>
-<div class="container text-center bg-success p-2" style="--bs-bg-opacity: .5;">
+
+<div class="container-fluid fs-3 p-4">
   <div class="row">
-    <div class="col-md-6">
-      <h2>Qoutes</h2> <hr>
+    <div class="col-md-6 p-2 bg-transparent border p-4">
+      <h2><strong>Qoutes</strong> </h2> <hr>
       <div>
-        <p *ngFor='let qoute of qoutes;let i=index'>
-          {{qoute.description}} <br>
-          <button (click)='toggleDetails(i)'>Show details</button>
-          <button>Upvote</button>
-          <button>Downvote</button>
+        <p *ngFor='let qoute of qoutes;let i=index' class="bg-transparent border p-4">
+          {{qoute.description}} <br><br>
+          <button class="btn btn-success fs-2 float-start" role="button"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+          <button class="btn btn-danger fs-2 float-start" role="button"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+          <button class="btn btn-primary fs-2 float-end" (click)='toggleDetails(i)'>Show details</button><br><br><br>
           <app-qoute-details *ngIf="qoute.showDescription" [quote]="qoute"></app-qoute-details>
         </p> 
       </div>
     </div>
   
-    <div class="col-md-6">
-      <app-qoute-form (addQoute)='addNewQoute($event)'></app-qoute-form>
+    <div class="col-md-6 p-4">
+      <div class="container">
+        <app-qoute-form (addQoute)='addNewQoute($event)'></app-qoute-form>
+      </div>
     </div>
   </div>
 </div>
