@@ -8,6 +8,8 @@ import { Quote } from '../quote';
   styleUrls: ['./qoute.component.css']
 })
 export class QouteComponent implements OnInit {
+  topQoute: Quote= new Quote("Infuse your life with action. Don't wait for it to happen. Make it happen. Make your own future. Make your own hope. Make your own love. And whatever your beliefs, honor your creator, not by passively waiting for grace to come down from upon high, but by doing what you can to make grace happen... yourself, right now, right down here on Earth.","Bradley Whitford","Kevin Leitich");
+  
   qoutes:Quote[]=[
     new Quote("Infuse your life with action. Don't wait for it to happen. Make it happen. Make your own future. Make your own hope. Make your own love. And whatever your beliefs, honor your creator, not by passively waiting for grace to come down from upon high, but by doing what you can to make grace happen... yourself, right now, right down here on Earth.","Bradley Whitford","Kevin Leitich"),
     new Quote("Do the difficult things while they are easy and do the great things while they are small. A journey of a thousand miles must begin with a single step.","Lao Tzu","Kevin Leitich"),
