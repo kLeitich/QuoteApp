@@ -1,0 +1,10 @@
+<div>
+    <h1>QouteApp</h1>
+    <p *ngFor='let qoute of qoutes;let i=index'>
+      {{qoute.description}} <br>
+      <button (click)='toggleDetails(i)'>Show details</button>
+      <button>Upvote</button>
+      <button>Downvote</button>
+    <app-qoute-details *ngIf="qoute.showDescription" [quote]="qoute"></app-qoute-details>
+    </p> 
+  </div>
