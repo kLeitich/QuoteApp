@@ -1,4 +1,5 @@
-<form #qouteForm='ngForm'>
+<h2>Adding a new Qoute</h2>
+<form #qouteForm='ngForm' (ngSubmit)='submitQoute()'>
     <div class="form-group">
 
         <label for="author">Author</label> <br>

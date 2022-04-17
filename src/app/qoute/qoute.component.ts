@@ -19,6 +19,12 @@ export class QouteComponent implements OnInit {
     this.qoutes[index].showDescription = !this.qoutes[index].showDescription;
   }
 
+  addNewQoute(quote:any){
+    let qouteLength =this.qoutes.length;
+    quote.id = qouteLength+1;
+    this.qoutes.push(quote)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
