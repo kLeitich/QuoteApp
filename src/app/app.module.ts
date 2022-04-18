@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { QouteComponent } from './qoute/qoute.component';
 import { QouteDetailsComponent } from './qoute-details/qoute-details.component';
 import { QouteFormComponent } from './qoute-form/qoute-form.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     QouteComponent,
     QouteDetailsComponent,
-    QouteFormComponent
+    QouteFormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

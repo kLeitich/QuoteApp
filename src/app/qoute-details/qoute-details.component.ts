@@ -8,8 +8,11 @@ import { Quote } from '../quote';
 })
 export class QouteDetailsComponent implements OnInit {
   @Input() quote!: Quote;
-    upvotes=0;
-    downvotes=0;
+
+  upvotes=0;
+  downvotes=0;
+
+  
   constructor() { }
 
   ngOnInit(): void {

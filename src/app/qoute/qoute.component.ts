@@ -24,12 +24,27 @@ export class QouteComponent implements OnInit {
   addNewQoute(quote:any){
     this.qoutes.push(quote)
   }
-  // upvote(i) {
-  //   this.quotes[i].upvotes ++;
-  // }
-  // downvote(i) {
-  //   this.quotes[i].downvotes  ++;
-  // }
+  upvote(i:number) {
+    this.qoutes[i].upvotes ++;
+  }
+  downvote(i:number) {
+    this.qoutes[i].downvotes  ++;
+  }
+
+  preNum!:number
+  lastNum!:number
+  counter!:number
+
+  highestUpvote(){
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.qoutes.length; this.counter++) {
+      this.lastNum = this.qoutes[this.counter].upvotes;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
+  }
 
   constructor() { }
 
