@@ -1,27 +1,42 @@
-# Quoteapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+# Quotes
 
-## Development server
+#### By **Kevin Leitich**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Description
+- An application that enables users to add quotes,delete quotes.You can also be able to see already existing and there author and can upvote and downvote quotes.
 
-## Code scaffolding
+## Behaviour Driven Development(BDD)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Input                        | Ouput                                                                                            |
+|--------------------------    |----------------------------------------------------------------------------------------------    |
+| User clicks Post  Quote     | Quote form displays with input fields for Author, Publisher                  |
+| User Clicks Delete           | The quote is purged from view             |
+| User clicks Upvote        |   upvote is incremented value by   1 on each click      |
+| User clicks Downvote     | downvote is decremented value by 1 on each click     |
 
-## Build
+## Setup/Installation requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Clone  or download and unzip the repository from github, [https://github.com/kLeitich/QuoteApp/](https://github.com/kLeitich/QuoteApp.git).
+- If you have git Use this command `git clone *` to clone the project.
+- Run ng serve from your terminal
 
-## Running unit tests
+## Live Demo
+To view the page click on the link below
+* [https://kleitich.github.io/QuoteApp/](*)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+- Angular CLI
 
-## Running end-to-end tests
+## Known Bugs
+- There are no known bugs currently. The page works as expected.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Support and Contact Details
+- For any comments,suggestions,feedback or inquiries, contact me via email: `pwachira900@gmail.com`
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Make contributions to the code.
+
+## License
+- This project is licensed under the MIT Open Source license Copyright (c) 2022. [Kevin Leitich](https://github.com/kLeitich/)
+
