@@ -7,6 +7,6 @@ export class HighlightDirective {
   
   constructor(elem:ElementRef) {
     
-    elem.nativeElement.element.class="bg-light"
+    elem.nativeElement.class="bg-light"
 }
 }
