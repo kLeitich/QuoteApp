@@ -8,6 +8,7 @@ import { QouteComponent } from './qoute/qoute.component';
 import { QouteDetailsComponent } from './qoute-details/qoute-details.component';
 import { QouteFormComponent } from './qoute-form/qoute-form.component';
 import { HighlightDirective } from './highlight.directive';
+import { DatepostedPipe } from './dateposted.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HighlightDirective } from './highlight.directive';
     QouteComponent,
     QouteDetailsComponent,
     QouteFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    DatepostedPipe
   ],
   imports: [
     BrowserModule,
