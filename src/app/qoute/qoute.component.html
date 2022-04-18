@@ -20,6 +20,7 @@
           {{qoute.description}} </p><br><br>
           <p  class="bg-transparent border p-4" *ngIf="highestUpvote()!==qoute.upvotes || qoute.upvotes==0">
             {{qoute.description}} </p><br><br>
+          <app-qoute-details *ngIf='qoute.showDescription' [quote]="qoute"></app-qoute-details>
           <button class="btn btn-success fs-2 float-start" (click)="upvote(i)" role="button"><span class="glyphicon glyphicon-thumbs-up"></span>{{qoute.upvotes}}</button>
           <button class="btn btn-danger fs-2 float-start" (click)="downvote(i)" role="button"><span class="glyphicon glyphicon-thumbs-down"></span>{{qoute.downvotes}}</button>
           <button class="btn btn-primary fs-2 float-end" (click)='toggleDetails(i)'>Show details</button><br><br><br>

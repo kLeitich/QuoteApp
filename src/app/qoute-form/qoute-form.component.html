@@ -21,17 +21,17 @@
         <div class="form-group">
 
             <label for="Qoute">Qoute</label><br>
-            <textarea class="form-control" id="qoute" rows="4" required [(ngModel)]="newQuote.description" name="qoute" #qoute='ngModel'></textarea>
+            <textarea class="form-control" id="qoute" rows="16" required [(ngModel)]="newQuote.description" name="qoute" #qoute='ngModel'></textarea>
             <div [hidden]="qoute.valid || qoute.pristine" class="alert alert-danger">
                 <p>Qoute field is required</p>
             </div>
 
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="complete">date posted</label><br>
             <input type='date' id="complete" required>
 
-        </div>
+        </div> -->
     <button type="submit" class="btn btn-success fs-2">Add Qoute</button>
     </form>
 </div>
