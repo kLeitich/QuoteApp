@@ -1,0 +1,38 @@
+<div class=" text-center fs-3">
+  <h1><strong>QouteApp</strong></h1><hr class="py-3">
+  <div class="container-sm">
+    <h3 class="float-start"><strong>Current trending:</strong> </h3><br>
+      <p class="mx-auto" style="width: 800px;" >
+        {{topQoute.description}} <br>
+       <i> Written by: {{topQoute.author}}</i>
+      
+      </p>
+  </div>
+</div>
+
+<div class="container-fluid fs-3 p-4">
+  <div class="row">
+    <div class="col-md-6 p-2 bg-transparent border p-4">
+      <h2><strong>Qoutes</strong> </h2> <hr>
+      <div *ngFor='let qoute of qoutes;let i=index'
+      >
+        <p  class="bg-transparent border p-4" appHighlight *ngIf="highestUpvote()===qoute.upvotes && qoute.upvotes>0">
+          {{qoute.description}} </p><br><br>
+          <p  class="bg-transparent border p-4" *ngIf="highestUpvote()!==qoute.upvotes || qoute.upvotes==0">
+            {{qoute.description}} </p><br><br>
+          <app-qoute-details *ngIf='qoute.showDescription' [quote]="qoute"></app-qoute-details>
+          <button class="btn btn-success fs-2 float-start" (click)="upvote(i)" role="button"><span class="glyphicon glyphicon-thumbs-up"></span>{{qoute.upvotes}}</button>
+          <button class="btn btn-danger fs-2 float-start" (click)="downvote(i)" role="button"><span class="glyphicon glyphicon-thumbs-down"></span>{{qoute.downvotes}}</button>
+          <button class="btn btn-primary fs-2 float-end" (click)='toggleDetails(i)'>Show details</button><br><br><br>
+          
+        
+      </div>
+    </div>
+  
+    <div class="col-md-6 p-4">
+      <div class="container">
+        <app-qoute-form (addQoute)='addNewQoute($event)'></app-qoute-form>
+      </div>
+    </div>
+  </div>
+</div>
